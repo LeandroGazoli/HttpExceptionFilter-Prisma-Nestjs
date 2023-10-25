@@ -1,6 +1,6 @@
 {
   "name": "http-exception-filter-prisma-nestjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "error handling for prisma erros and nestJS",
   "main": "src/HttpExceptionFilter.ts",
   "scripts": {
