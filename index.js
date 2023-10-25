@@ -22,7 +22,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2001':
                 response.status(common_1.HttpStatus.NOT_FOUND).json({
                     statusCode: common_1.HttpStatus.NOT_FOUND,
@@ -30,7 +31,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.NOT_FOUND);
+                });
+                break;
             case 'P2002':
                 response.status(common_1.HttpStatus.CONFLICT).json({
                     statusCode: common_1.HttpStatus.CONFLICT,
@@ -38,7 +40,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.CONFLICT);
+                });
+                break;
             case 'P2003':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -46,7 +49,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2004':
                 response.status(common_1.HttpStatus.INTERNAL_SERVER_ERROR).json({
                     statusCode: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
@@ -54,7 +58,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+                });
+                break;
             case 'P2005':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -62,7 +67,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2006':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -70,7 +76,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2007':
                 response.status(common_1.HttpStatus.INTERNAL_SERVER_ERROR).json({
                     statusCode: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
@@ -78,7 +85,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+                });
+                break;
             case 'P2008':
                 response.status(common_1.HttpStatus.INTERNAL_SERVER_ERROR).json({
                     statusCode: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
@@ -86,7 +94,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+                });
+                break;
             case 'P2009':
                 response.status(common_1.HttpStatus.INTERNAL_SERVER_ERROR).json({
                     statusCode: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
@@ -94,7 +103,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+                });
+                break;
             case 'P2010':
                 response.status(common_1.HttpStatus.INTERNAL_SERVER_ERROR).json({
                     statusCode: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
@@ -102,7 +112,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+                });
+                break;
             case 'P2011':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -110,7 +121,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2012':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -118,7 +130,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2013':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -126,7 +139,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2014':
                 response.status(common_1.HttpStatus.CONFLICT).json({
                     statusCode: common_1.HttpStatus.CONFLICT,
@@ -134,7 +148,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.CONFLICT);
+                });
+                break;
             case 'P2015':
                 response.status(common_1.HttpStatus.INTERNAL_SERVER_ERROR).json({
                     statusCode: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
@@ -142,7 +157,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+                });
+                break;
             case 'P2016':
                 response.status(common_1.HttpStatus.INTERNAL_SERVER_ERROR).json({
                     statusCode: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
@@ -150,7 +166,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+                });
+                break;
             case 'P2017':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -158,7 +175,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2018':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -166,7 +184,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2019':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -174,7 +193,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2020':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -182,7 +202,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2021':
                 response.status(common_1.HttpStatus.INTERNAL_SERVER_ERROR).json({
                     statusCode: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
@@ -190,7 +211,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+                });
+                break;
             case 'P2022':
                 response.status(common_1.HttpStatus.INTERNAL_SERVER_ERROR).json({
                     statusCode: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
@@ -198,7 +220,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+                });
+                break;
             case 'P2023':
                 response.status(common_1.HttpStatus.INTERNAL_SERVER_ERROR).json({
                     statusCode: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
@@ -206,7 +229,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+                });
+                break;
             case 'P2024':
                 response.status(common_1.HttpStatus.INTERNAL_SERVER_ERROR).json({
                     statusCode: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
@@ -214,7 +238,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+                });
+                break;
             case 'P2025':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -222,7 +247,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2026':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -230,7 +256,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2027':
                 response.status(common_1.HttpStatus.INTERNAL_SERVER_ERROR).json({
                     statusCode: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
@@ -238,7 +265,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+                });
+                break;
             case 'P2028':
                 response.status(common_1.HttpStatus.INTERNAL_SERVER_ERROR).json({
                     statusCode: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
@@ -246,7 +274,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+                });
+                break;
             case 'P2030':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -254,7 +283,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2031':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -262,7 +292,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2033':
                 response.status(common_1.HttpStatus.BAD_REQUEST).json({
                     statusCode: common_1.HttpStatus.BAD_REQUEST,
@@ -270,7 +301,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.BAD_REQUEST);
+                });
+                break;
             case 'P2034':
                 response.status(common_1.HttpStatus.CONFLICT).json({
                     statusCode: common_1.HttpStatus.CONFLICT,
@@ -278,7 +310,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.CONFLICT);
+                });
+                break;
             default:
                 response.status(common_1.HttpStatus.INTERNAL_SERVER_ERROR).json({
                     statusCode: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
@@ -286,7 +319,8 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     timestamp: new Date().toISOString(),
                     path: request.url,
                     data: exception,
-                }, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+                });
+                break;
         }
     }
 };
