@@ -1,8 +1,8 @@
 {
   "name": "http-exception-filter-prisma-nestjs",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "error handling for prisma erros and nestJS",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
