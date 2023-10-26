@@ -1,8 +1,28 @@
 {
   "name": "http-exception-filter-prisma-nestjs",
-  "version": "0.0.10",
-  "description": "Error handling for prisma erros and nestJS",
+  "version": "0.0.11",
+  "description": "An exception filter to handle Prisma errors in NestJS. / Um filtro de exceção para lidar com erros do Prisma no NestJS.",
   "main": "index.js",
+  "keywords": [
+    "nestjs",
+    "prisma",
+    "exception",
+    "filter",
+    "http",
+    "error",
+    "error handling",
+    "exception handling",
+    "NestJS",
+    "Prisma",
+    "manipulação de erros",
+    "exception filter",
+    "tratamento de erros"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeandroGazoli/HttpExceptionFilter-Prisma-Nestjs"
+  },
+  "homepage": "https://github.com/LeandroGazoli/HttpExceptionFilter-Prisma-Nestjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
