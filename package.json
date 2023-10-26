@@ -1,6 +1,6 @@
 {
   "name": "http-exception-filter-prisma-nestjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An exception filter to handle Prisma errors in NestJS. / Um filtro de exceção para lidar com erros do Prisma no NestJS.",
   "main": "index.js",
   "keywords": [
