@@ -32,7 +32,7 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     break;
                 case 'P2003':
                     statusCode = common_1.HttpStatus.BAD_REQUEST;
-                    message = `Foreign key constraint failure in the column: ${exception?.meta?.target}`;
+                    message = `Foreign key constraint failure in the column: ${exception?.meta?.target ?? exception?.meta?.field_name}`;
                     break;
                 case 'P2004':
                     statusCode = common_1.HttpStatus.INTERNAL_SERVER_ERROR;
@@ -64,7 +64,7 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                     break;
                 case 'P2011':
                     statusCode = common_1.HttpStatus.BAD_REQUEST;
-                    message = `Nullity constraint violation in ${exception?.meta?.target}`;
+                    message = `Nullity constraint violation in ${exception?.meta?.target ?? exception?.meta?.constraint}`;
                     break;
                 case 'P2012':
                     statusCode = common_1.HttpStatus.BAD_REQUEST;

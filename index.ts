@@ -27,7 +27,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
           break;
         case 'P2003':
           statusCode = HttpStatus.BAD_REQUEST;
-          message = `Foreign key constraint failure in the column: ${exception?.meta?.target}`;
+          message = `Foreign key constraint failure in the column: ${exception?.meta?.target ?? exception?.meta?.field_name}`;
           break;
         case 'P2004':
           statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
