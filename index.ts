@@ -59,7 +59,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
           break;
         case 'P2011':
           statusCode = HttpStatus.BAD_REQUEST;
-          message = `Nullity constraint violation in ${exception?.meta?.target}`;
+          message = `Nullity constraint violation in ${exception?.meta?.target ?? exception?.meta?.constraint}`;
           break;
         case 'P2012':
           statusCode = HttpStatus.BAD_REQUEST;

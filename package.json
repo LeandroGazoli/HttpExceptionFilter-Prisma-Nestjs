@@ -1,6 +1,6 @@
 {
   "name": "http-exception-filter-prisma-nestjs",
-  "version": "1.0.1",
+  "version": "1.0.7",
   "description": "An exception filter to handle Prisma errors in NestJS. / Um filtro de exceção para lidar com erros do Prisma no NestJS.",
   "main": "index.js",
   "keywords": [
@@ -28,10 +28,9 @@
   },
   "author": "Leandro Gazoli",
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
-    "@nestjs/jwt": "^10.1.1",
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^10.0.0",
     "@prisma/client": "5.5.0",
