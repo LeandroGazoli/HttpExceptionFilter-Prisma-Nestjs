@@ -1,11 +1,5 @@
 <p align="center">Error handle for prisma.io with NestJs / Captura de erros do prisma.io com NestJS</p>
 
-### Atention:
-
-This code for now only contains a message in Portuguese PT-BR, I'm looking for someone to help write a formula to add other languages
-
-Esse codigo por enquanto contem somente mensagem em portugues, estou buscando alguem pra ajudar a escrever uma formula para adicionar outras linguagens
-
 ## Installing
 
 ### Package manager
