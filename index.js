@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HttpExceptionFilter = void 0;
 const common_1 = require("@nestjs/common");
-const binary_1 = require("@prisma/client/runtime/binary");
+const library_1 = require("@prisma/client/runtime/library");
 let HttpExceptionFilter = class HttpExceptionFilter {
     catch(exception, host) {
         const ctx = host.switchToHttp();
@@ -16,7 +16,6 @@ let HttpExceptionFilter = class HttpExceptionFilter {
         const request = ctx.getRequest();
         let statusCode = common_1.HttpStatus.INTERNAL_SERVER_ERROR;
         let message = 'Internal server error';
-        let extras = {};
         if (exception.code) {
             switch (exception.code) {
                 case 'P2000':
@@ -122,7 +121,6 @@ let HttpExceptionFilter = class HttpExceptionFilter {
                 case 'P2025':
                     statusCode = common_1.HttpStatus.BAD_REQUEST;
                     message = `An operation failed because it depends on one or more required records that were not found.`;
-                    extras = exception;
                     break;
                 case 'P2026':
                     statusCode = common_1.HttpStatus.BAD_REQUEST;
@@ -157,7 +155,6 @@ let HttpExceptionFilter = class HttpExceptionFilter {
         response.status(statusCode).json({
             statusCode,
             message,
-            extras,
             timestamp: new Date().toISOString(),
             path: request.url,
             data: exception,
@@ -166,6 +163,6 @@ let HttpExceptionFilter = class HttpExceptionFilter {
 };
 exports.HttpExceptionFilter = HttpExceptionFilter;
 exports.HttpExceptionFilter = HttpExceptionFilter = __decorate([
-    (0, common_1.Catch)(binary_1.PrismaClientKnownRequestError)
+    (0, common_1.Catch)(library_1.PrismaClientKnownRequestError)
 ], HttpExceptionFilter);
 //# sourceMappingURL=index.js.map

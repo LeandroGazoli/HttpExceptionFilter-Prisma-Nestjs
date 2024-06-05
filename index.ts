@@ -1,5 +1,5 @@
 import { ExceptionFilter, Catch, ArgumentsHost, HttpStatus } from '@nestjs/common';
-import { PrismaClientKnownRequestError } from '@prisma/client/runtime/binary';
+import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 
 @Catch(PrismaClientKnownRequestError)
 export class HttpExceptionFilter implements ExceptionFilter {
@@ -10,7 +10,6 @@ export class HttpExceptionFilter implements ExceptionFilter {
 
     let statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
     let message = 'Internal server error';
-    let extras = {};
 
     if (exception.code) {
       switch (exception.code) {
@@ -121,7 +120,6 @@ export class HttpExceptionFilter implements ExceptionFilter {
         case 'P2025':
           statusCode = HttpStatus.BAD_REQUEST;
           message = `An operation failed because it depends on one or more required records that were not found.`;
-          extras = exception;
           break;
         case 'P2026':
           statusCode = HttpStatus.BAD_REQUEST;
@@ -157,7 +155,6 @@ export class HttpExceptionFilter implements ExceptionFilter {
     response.status(statusCode).json({
       statusCode,
       message,
-      extras,
       timestamp: new Date().toISOString(),
       path: request.url,
       data: exception,
