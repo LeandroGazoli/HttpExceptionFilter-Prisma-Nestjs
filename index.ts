@@ -1,5 +1,5 @@
 import { ExceptionFilter, Catch, ArgumentsHost, HttpStatus } from '@nestjs/common';
-import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
+import { PrismaClientKnownRequestError } from '@prisma/client/runtime/binary';
 
 @Catch(PrismaClientKnownRequestError)
 export class HttpExceptionFilter implements ExceptionFilter {
@@ -10,6 +10,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
 
     let statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
     let message = 'Internal server error';
+    let extras = {};
 
     if (exception.code) {
       switch (exception.code) {
@@ -27,7 +28,9 @@ export class HttpExceptionFilter implements ExceptionFilter {
           break;
         case 'P2003':
           statusCode = HttpStatus.BAD_REQUEST;
-          message = `Foreign key constraint failure in the column: ${exception?.meta?.target ?? exception?.meta?.field_name}`;
+          message = `Foreign key constraint failure in the column: ${
+            exception?.meta?.target ?? exception?.meta?.field_name
+          }`;
           break;
         case 'P2004':
           statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
@@ -59,7 +62,9 @@ export class HttpExceptionFilter implements ExceptionFilter {
           break;
         case 'P2011':
           statusCode = HttpStatus.BAD_REQUEST;
-          message = `Nullity constraint violation in ${exception?.meta?.target ?? exception?.meta?.constraint}`;
+          message = `Nullity constraint violation in ${
+            exception?.meta?.target ?? exception?.meta?.constraint
+          }`;
           break;
         case 'P2012':
           statusCode = HttpStatus.BAD_REQUEST;
@@ -115,7 +120,8 @@ export class HttpExceptionFilter implements ExceptionFilter {
           break;
         case 'P2025':
           statusCode = HttpStatus.BAD_REQUEST;
-          message = `An operation failed because it depends on one or more required records that were not found: ${exception?.meta?.cause}`;
+          message = `An operation failed because it depends on one or more required records that were not found.`;
+          extras = exception;
           break;
         case 'P2026':
           statusCode = HttpStatus.BAD_REQUEST;
@@ -151,6 +157,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
     response.status(statusCode).json({
       statusCode,
       message,
+      extras,
       timestamp: new Date().toISOString(),
       path: request.url,
       data: exception,
